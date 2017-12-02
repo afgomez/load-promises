@@ -16,7 +16,7 @@
   "scripts": {
     "test": "echo 'Open `test.html` in a browser.' && exit 1",
     "build": "rollup -c rollup.config.js",
-    "prepublish": "npm run build"
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "rollup": "^0.52.0"
@@ -26,9 +26,7 @@
     "type": "git",
     "url": "git+https://github.com/afgomez/load-promises.git"
   },
-  "keywords": [
-    "DOMContentLoaded"
-  ],
+  "keywords": ["DOMContentLoaded"],
   "bugs": {
     "url": "https://github.com/afgomez/load-promises/issues"
   },
