@@ -21,5 +21,16 @@
   "devDependencies": {
     "rollup": "^0.52.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afgomez/load-promises.git"
+  },
+  "keywords": [
+    "DOMContentLoaded"
+  ],
+  "bugs": {
+    "url": "https://github.com/afgomez/load-promises/issues"
+  },
+  "homepage": "https://github.com/afgomez/load-promises#readme"
 }
