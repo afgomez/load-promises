@@ -42,7 +42,7 @@ In a browser. Both promises are namespaced in `loadPromises`
 ```html
 <html>
 <head>
-  <script src="dist/loadPromises.umd.js"></script>
+  <script src="loadPromises.umd.js"></script>
   <script>
     // Equivalent of $(document).ready();
     loadPromises.DOMContentLoaded.then(function() {
