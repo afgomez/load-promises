@@ -1,0 +1,57 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    p {
+      margin: 0;
+    }
+
+    p.dcl {
+      color: orange;
+    }
+
+    p.wl {
+      color: orangered;
+    }
+  </style>
+  <script src="dist/loadPromises.umd.js"></script>
+  <script>
+
+    loadPromises.DOMContentLoaded.then(function () {
+      document.body.innerHTML += '<p class="dcl">1. DOMContentLoaded first callback attached</p>'
+    });
+
+    // Since this is windowLoad, it fires after the next
+    loadPromises.windowLoad.then(function () {
+      document.body.innerHTML += '<p class="wl">3. window load first callback fired</p>'
+    });
+
+    // Since this is DOMContentLoaded, it fires before the previous
+    loadPromises.DOMContentLoaded.then(function () {
+      document.body.innerHTML += '<p class="dcl">2. DOMContentLoaded second callback attached</p>'
+    });
+
+    loadPromises.windowLoad.then(function () {
+      document.body.innerHTML += '<p class="wl">4. window load second callback fired</p>'
+
+      loadPromises.DOMContentLoaded.then(function () {
+        document.body.innerHTML += '<p class="dcl">5. DOMContentLoaded called after loading</p>'
+      });
+      loadPromises.windowLoad.then(function () {
+        document.body.innerHTML += '<p class="wl">6. window load called after loading</p>'
+      });
+    });
+
+
+  </script>
+</head>
+
+<body>
+  <p>Existing HTML</p>
+</body>
+
+</html>
