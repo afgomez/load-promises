@@ -15,9 +15,11 @@
   ],
   "scripts": {
     "test": "echo 'Open `test.html` in a browser.' && exit 1",
-    "build": "rollup -c rollup.config.js"
+    "build": "rollup -c rollup.config.js",
+    "prepublish": "npm run build"
   },
   "devDependencies": {
     "rollup": "^0.52.0"
-  }
+  },
+  "dependencies": {}
 }
