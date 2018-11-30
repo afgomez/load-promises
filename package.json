@@ -5,6 +5,7 @@
   "main": "loadPromises.umd.js",
   "module": "loadPromises.es.js",
   "jsnext:main": "loadPromises.es.js",
+  "types": "loadPromises.d.ts",
   "author": "Alejandro Fernández Gómez",
   "license": "MIT",
   "files": [
