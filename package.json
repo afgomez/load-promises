@@ -11,6 +11,7 @@
   "files": [
     "loadPromises.es.js",
     "loadPromises.umd.js",
+    "loadPromises.d.ts",
     "README.md",
     "test.html"
   ],
